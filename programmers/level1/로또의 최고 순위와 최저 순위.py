@@ -27,7 +27,6 @@ def solution(lottos, win_nums):
     min = rank(len(cp_lottos))
     max = rank(len(cp_lottos) + lottos.count(0))
 
-
     answer = [max,min]
     return answer
 
