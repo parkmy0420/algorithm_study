@@ -23,22 +23,16 @@ def solution(s):
                     temp.append(''.join(slist[:i]))
                     del slist[:i]
                 else:
-                    if stack[-1] == ''.join(slist[:i]):
-                        stack.append(''.join(slist[:i]))
-                        del slist[:i]
-
-                        if j == len(s) - i: # 마지막 인덱스 일때
-                            temp.append(str(len(stack)) + str(''.join(stack[-1])) if len(stack) != 1 else str(''.join(stack[-1])))
-                            stack.clear()
-                    else:
+                    if stack[-1] != ''.join(slist[:i]):
                         temp.append(str(len(stack)) + str(''.join(stack[-1])) if len(stack) != 1 else str(''.join(stack[-1])))
                         stack.clear()
-                        stack.append(''.join(slist[:i]))
-                        del slist[:i]
 
-                        if j == len(s) - i:
-                            temp.append(str(len(stack)) + str(''.join(stack[-1])) if len(stack) != 1 else str(''.join(stack[-1])))
-                            stack.clear()
+                    stack.append(''.join(slist[:i]))
+                    del slist[:i]
+
+                    if j == len(s) - i: # 마지막 인덱스 일때
+                        temp.append(str(len(stack)) + str(''.join(stack[-1])) if len(stack) != 1 else str(''.join(stack[-1])))
+                        stack.clear()
 
             cnt.append(len(''.join(temp)))
             temp, stack = [], []
