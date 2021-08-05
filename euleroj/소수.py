@@ -1,9 +1,7 @@
 
-m = int(input())
-n = int(input())
+m, n = int(input()), int(input())
 
-nnum = set(range(2,n+1))
-mnum = set(range(2,m))
+nnum, mnum = set(range(2,n+1)), set(range(2,m))
 
 for i in range(2, int(n ** 0.5)+1):
     if i in nnum:

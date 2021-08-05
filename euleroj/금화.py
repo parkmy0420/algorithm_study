@@ -7,5 +7,5 @@ for i in range(1, m+1):
         n.append(n[i//2])
     else:
         n.append(n[(i-1)//2]+n[(i//2)+1])
-
+print(n)
 print(max(n))
