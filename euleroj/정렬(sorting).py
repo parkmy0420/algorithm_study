@@ -1,5 +1,6 @@
 n = int(input())
-nlist = [int(n) for n in input().split()]
+nlist = input().split()
+nlist = list(map(int, nlist))
 
 for i in nlist:
     print(i, end = ' ')
