@@ -1,4 +1,4 @@
-#
+#v1
 # day = input()
 # carnum = input().split()
 # sum = 0
@@ -9,7 +9,14 @@
 #
 # print(sum)
 
+#v2
 day = int(input())
-carnum = list(map(int,input().split()))
+print(list(map(int,input().split())).count(day))
 
-print(carnum.count(day))
+#v3
+# day = int(input())
+# cnt = 0
+# for i in list(map(int,input().split())):
+#     if day == i:
+#         cnt += 1
+# print(cnt)
