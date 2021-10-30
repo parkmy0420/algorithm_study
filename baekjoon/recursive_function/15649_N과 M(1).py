@@ -18,7 +18,7 @@ def nm(cnt):
 
 
 if m == 1:
-    print(*nlist)
+    print(*nlist, sep='\n')
 else:
     nm(0)
 
