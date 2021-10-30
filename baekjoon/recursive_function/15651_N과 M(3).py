@@ -11,6 +11,6 @@ def nm():
         nm()
         temp.pop()
 if m == 1:
-    print(*nlist)
+    print(*nlist, sep='\n')
 else:
     nm()
