@@ -26,7 +26,7 @@ import sys
 input = sys.stdin.readline
 n, s = map(int, input().split())
 nlist = list(map(int, input().split()))
-temp, cnt, check = [], 0, []
+cnt = 0
 
 def dfs(idx, sum):
     global cnt
