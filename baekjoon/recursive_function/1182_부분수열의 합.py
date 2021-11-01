@@ -36,8 +36,8 @@ def dfs(idx, sum):
     if sum == s:
         cnt += 1
 
-    dfs(idx+1, sum - nlist[idx])
-    dfs(idx+1, sum)
+    dfs(idx+1, sum - nlist[idx])    # nlist[idx]를 선택하지 않은 경우
+    dfs(idx+1, sum)                 # nlist[idx]를 선택한 경우
 
 dfs(0,0)
 print(cnt)
