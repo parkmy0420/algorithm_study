@@ -6,7 +6,7 @@ def bfs(info):
 
     while queue:    # 큐가 빌 때까지
         x, y = queue.pop(0)
-        if x == info[2][0] and y == info[2][1]:   # 마지막 지점에 도착하면 break
+        if x == info[2][0] and y == info[2][1]:   # 목표 지점에 도착하면 break
             print(graph[x][y])
             break
         for i in range(8):  # 8방향 이동
@@ -19,12 +19,10 @@ def bfs(info):
 import sys
 input = sys.stdin.readline
 num = int(input())
-dx, dy = [-2, -2, -1, -1, 1, 1, 2, 2], [-1, 1, -2, 2, -2, 2, -1, 1]   # 상하좌우 이동변수
+dx, dy = [-2, -2, -1, -1, 1, 1, 2, 2], [-1, 1, -2, 2, -2, 2, -1, 1]   # 8방향 이동좌표
 
 for i in range(num):
     info = []
     for j in range(3):
         info.append(list(map(int, input().split())))
     bfs(info)
-
-
