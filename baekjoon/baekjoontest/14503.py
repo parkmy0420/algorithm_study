@@ -29,11 +29,7 @@ while True:
         nx, ny = x + dx, y + dy
         if n > nx >= 0 and m > ny >= 0:
             if graph[nx][ny] == 1: break  # 뒤쪽 방향이 벽이라 후진 불가능
-            else:    # 뒤쪽 방향 후진 가능
-                if graph[nx][ny] == 0:  # 청소 가능
-                    graph[nx][ny] = 2
-                    cnt += 1
-                x, y = nx, ny
+            else: x, y = nx, ny  # 뒤쪽 방향 후진 가능
         else: break
 
 print(cnt)
